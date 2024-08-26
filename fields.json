@@ -1,0 +1,64 @@
+[
+    {
+        "https://www.w3schools.com/html/html_forms.asp": [
+            {
+                "name": "fname",
+                "label": "First name:",
+                "type": "text",
+                "value": "John"
+            },
+            {
+                "name": "lname",
+                "label": "Last name:",
+                "type": "text",
+                "value": "Doe"
+            }
+        ]
+    },
+    {
+        "https://github.com/login": [
+            {
+                "name": "login",
+                "label": "Username or email address",
+                "type": "text",
+                "value": null
+            },
+            {
+                "name": "password",
+                "label": "Password",
+                "type": "password",
+                "value": null
+            },
+            {
+                "name": "webauthn-conditional",
+                "label": "Password",
+                "type": "hidden",
+                "value": "undefined"
+            },
+            {
+                "name": "javascript-support",
+                "label": "Password",
+                "type": "hidden",
+                "value": "unknown"
+            },
+            {
+                "name": "webauthn-support",
+                "label": "Password",
+                "type": "hidden",
+                "value": "unknown"
+            },
+            {
+                "name": "webauthn-iuvpaa-support",
+                "label": "Password",
+                "type": "hidden",
+                "value": "unknown"
+            },
+            {
+                "name": "return_to",
+                "label": "Password",
+                "type": "hidden",
+                "value": "https://github.com/login"
+            }
+        ]
+    }
+]

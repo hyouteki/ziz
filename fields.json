@@ -1,67 +1,39 @@
 [
     {
-        "https://www.w3schools.com/html/html_forms.asp": [
+        "http://localhost:8000": [
             {
-                "name": "fname",
-                "label": "First name:",
+                "intent": "First Name",
+                "xpath": "/html/body/div/form/div[1]/input",
                 "type": "text",
                 "value": "John"
             },
             {
-                "name": "lname",
-                "label": "Last name:",
+                "intent": "First Name (Full)",
+                "xpath": "/html/body/div/form/div[2]/input",
+                "type": "text",
+                "value": "Johnathan"
+            },
+            {
+                "intent": "Last Name",
+                "xpath": "/html/body/div/form/div[3]/input",
                 "type": "text",
                 "value": "Doe"
+            },
+            {
+                "intent": "Country",
+                "xpath": "/html/body/div/form/div[4]/select",
+                "options": [
+                    "",
+                    "us",
+                    "in",
+                    "uk"
+                ]
+            },
+            {
+                "intent": "Biography",
+                "xpath": "/html/body/div/form/div[5]/textarea",
+                "value": "A short bio..."
             }
         ]
-    },
-    {
-        "https://github.com/login": [
-            {
-                "name": "login",
-                "label": "Username or email address",
-                "type": "text",
-                "value": null
-            },
-            {
-                "name": "password",
-                "label": "Password",
-                "type": "password",
-                "value": null
-            },
-            {
-                "name": "webauthn-conditional",
-                "label": "Password",
-                "type": "hidden",
-                "value": "undefined"
-            },
-            {
-                "name": "javascript-support",
-                "label": "Password",
-                "type": "hidden",
-                "value": "unknown"
-            },
-            {
-                "name": "webauthn-support",
-                "label": "Password",
-                "type": "hidden",
-                "value": "unknown"
-            },
-            {
-                "name": "webauthn-iuvpaa-support",
-                "label": "Password",
-                "type": "hidden",
-                "value": "unknown"
-            },
-            {
-                "name": "return_to",
-                "label": "Password",
-                "type": "hidden",
-                "value": "https://github.com/login"
-            }
-        ]
-    },
-    {
-        "https://rpachallenge.com/": []
     }
 ]

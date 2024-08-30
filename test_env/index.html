@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Form Page</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h3 style="margin-bottom: 50px;">Test Form</h3>
+      <form action="/submit" method="post">
+		
+        <!-- Fields with similar names -->
+        <div class="input-field">
+          <input id="fname" name="fname" type="text" value="John">
+          <label for="fname">First Name</label>
+        </div>
+        <div class="input-field">
+          <input id="firstname" name="firstname" type="text" value="Johnathan">
+          <label for="firstname">First Name (Full)</label>
+        </div>
+
+        <!-- Non-Standard Field Properties -->
+        <div class="input-field">
+          <input id="last-name" ng-reflect-name="lastname" type="text" value="Doe">
+          <label for="last-name">Last Name</label>
+        </div>
+
+        <!-- Select Field -->
+        <div class="input-field">
+          <select id="country" name="country">
+            <option value="" disabled selected>Choose your country</option>
+            <option value="us">United States</option>
+            <option value="in">India</option>
+            <option value="uk">United Kingdom</option>
+          </select>
+          <label for="country">Country</label>
+        </div>
+
+        <!-- Textarea Field -->
+        <div class="input-field">
+          <textarea id="bio" name="bio" class="materialize-textarea">A short bio...</textarea>
+          <label for="bio">Biography</label>
+        </div>
+
+        <!-- Non-Meaningful Fields -->
+        <div style="display:none;">
+          <input type="text" name="honeypot" value="">
+        </div>
+
+		<!-- Submit button -->
+        <div class="input-field">
+          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,7 +1,5 @@
 {
 	"urls": [
-		"https://www.w3schools.com/html/html_forms.asp",
-		"https://github.com/login",
-		"https://rpachallenge.com/"
+		"http://localhost:8000"
 	]
 }

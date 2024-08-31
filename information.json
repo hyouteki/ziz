@@ -1,0 +1,12 @@
+{
+    "firstname": "Nosferatu",
+    "middlename": "Von",
+    "lastname": "Orava",
+    "country": "ro",
+    "bio": "Just a Nosferatu laying dormant in his castle...",
+    "address": "Castle Orava, Romania",
+    "phone_number": "+40 123 456 789",
+    "email": "nosferatu@orava.ro",
+    "gender": "Male",
+    "id": "NV123456"
+}

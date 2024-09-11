@@ -28,13 +28,15 @@ def get_user_info(query):
     """)
 
 queries = [
-    "What is the name?",
-    "Give me the user's name",
+    # "What is the name?",
+    # "Give me the user's name",
     "What is the full name?",
     "customername",
     "customerID",
-    "What is the email address?",
-    "Where does the user live?"
+    "username",
+    "username",
+    # "What is the email address?",
+    # "Where does the user live?"
 ]
 
 for query in queries:

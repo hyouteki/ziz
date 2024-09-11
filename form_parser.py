@@ -4,9 +4,6 @@ import json
 
 debug = True
 
-with open("./tests.json", "r") as file:
-    test_urls = json.load(file)["urls"]
-
 class Field:
     def __init__(self, intent, xpath):
         self.intent = intent
@@ -138,12 +135,21 @@ def extract_form_fields(url):
 
     return fields_dict
 
-if __name__ == "__main__":
+def parse_form(filepath="tests.json", outfilepath="fields.json", _debug=True):
+    global debug
+    debug = _debug
+    
+    with open(filepath, "r") as file:
+        test_urls = json.load(file)["urls"]
+
     output_dict = []
     for url in test_urls:
         print(f"info: processing '{url}'")
         fields_dict = extract_form_fields(url)
         output_dict.append({url: fields_dict})
-        
-    with open("fields.json", "w") as file:
+
+    with open(outfilepath, "w") as file:
         json.dump(output_dict, file, indent=4)
+
+if __name__ == "__main__":
+    parse_form()

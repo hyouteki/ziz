@@ -1,1 +1,3 @@
 COHERE_API_KEY
+venv
+*__pycache__/

@@ -1,0 +1,39 @@
+[
+    {
+        "http://localhost:8000": [
+            {
+                "intent": "firstname",
+                "xpath": "/html/body/div/form/div[1]/input",
+                "type": "text",
+                "value": "John"
+            },
+            {
+                "intent": "firstname",
+                "xpath": "/html/body/div/form/div[2]/input",
+                "type": "text",
+                "value": "Johnathan"
+            },
+            {
+                "intent": "lastname",
+                "xpath": "/html/body/div/form/div[3]/input",
+                "type": "text",
+                "value": "Doe"
+            },
+            {
+                "intent": "country",
+                "xpath": "/html/body/div/form/div[4]/select",
+                "options": [
+                    "",
+                    "us",
+                    "in",
+                    "uk"
+                ]
+            },
+            {
+                "intent": "bio",
+                "xpath": "/html/body/div/form/div[5]/textarea",
+                "value": "A short bio..."
+            }
+        ]
+    }
+]

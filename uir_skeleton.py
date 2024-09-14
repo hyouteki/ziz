@@ -11,6 +11,10 @@ class UIR_Model(ABC):
     def similarity_score(self, test):
         pass
 
+    @abstractmethod
+    def name(self):
+        pass
+
 class ZeroShot_UIR_Model(UIR_Model):
     def __init__(self, candidates):
         super().__init__(candidates)
@@ -19,6 +23,9 @@ class ZeroShot_UIR_Model(UIR_Model):
     def similarity_score(self, test):
         result = self.model(test, self.candidates)
         return result["labels"][0], result["scores"][0]
+
+    def name(self):
+        return("zero_shot")
 
 class SentenceBert_UIR_Model(UIR_Model):
     def __init__(self, candidates):
@@ -33,6 +40,9 @@ class SentenceBert_UIR_Model(UIR_Model):
         best_intent = self.candidates[best_intent_index]
         best_score = similarity_scores[0][best_intent_index].item()
         return best_intent, best_score
+    
+    def name(self):
+        return("sentence_bert")
 
 if __name__ == "__main__":
     candidates = [

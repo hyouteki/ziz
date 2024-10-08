@@ -18,7 +18,6 @@ setup(
         "lxml",
         "transformers",
         "sentence-transformers",
-        "abc",
     ],
     include_package_data=True,
     description=short_description,

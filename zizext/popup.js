@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			const url = URL.createObjectURL(blob);
 			chrome.downloads.download({
 				url: url,
-				filename: `tab_monitor_data_${Date.now()}.json`,
+				filename: `zizext_workflow_${Date.now()}.json`,
 				saveAs: true
 			}, () => {
 				URL.revokeObjectURL(url);

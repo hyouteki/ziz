@@ -77,14 +77,14 @@ class TextareaField(Field):
         return field_dict
 
 def find_label(element):
-    # check for preceding sibling label
+    # Check for preceding sibling label
     if label := element.xpath("preceding-sibling::label[1]"):
         return label[0].text.strip()
-    # check for label with "for" attribute referencing the current element's id
+    # Check for label with "for" attribute referencing the current element's id
     if element_id := element.get("id"):
         if label := element.xpath(f"//label[@for='{element_id}']"):
-            return label[0].text.strip()
-    # return None if no label is found
+            return label[0].text.strip() if label[0].text else None
+    # Return None if no label is found
     return None
 
 def get_url_content(url):
@@ -101,7 +101,7 @@ def extract_field_intent(field):
         return label
     return field.get("name")
 
-# filter out hidden fields or non-meaningful fields
+# Filter out hidden fields or non-meaningful fields
 def is_meaningful_field(field):
     non_meaningful_keywords = ["captcha", "honeypot", "hidden"]
     if field.get("type") == "hidden":
@@ -120,7 +120,7 @@ def parse_foreach_form(form):
             continue
         field_type = input_field.get("type")
         if field_type == "submit":
-            continue  # skip submit button
+            continue  # Skip submit button
         field_intent = extract_field_intent(input_field)
         field_value = input_field.get("value")
         field_xpath = input_field.getroottree().getpath(input_field)
@@ -149,8 +149,8 @@ def parse_foreach_form(form):
 
     return fields
 
-def parse_foreach_url(url):
-    content = get_url_content(url)
+def parse_foreach_url(url, html_content=None):
+    content = get_url_content(url) if html_content == None else html_content
     if not content:
         error(f"no content found at '{url}'")
         return []
@@ -165,7 +165,7 @@ def parse_foreach_url(url):
 
     return fields_dict
 
-def parse_form(filepath=test_samples_path, outfilepath=processed_fields_path):
+def parse_forms(filepath=test_samples_path, outfilepath=processed_fields_path):
     with open(filepath, "r") as file:
         test_urls = json.load(file)["urls"]
 
@@ -233,6 +233,6 @@ def autofill_form(filepath=intent_processed_fields_path, information_path=inform
         
 if __name__ == "__main__":
     if not autofill:
-        parse_form()
+        parse_forms()
         capture_intent()
     autofill_form()        

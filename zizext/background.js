@@ -64,9 +64,9 @@ function handleTabCreated(tab) {
 		url: tab.url || "about:blank",
 		timestamp: new Date().toISOString()
 	};
-	tabSequence.push(event);
-	chrome.storage.local.set({ tabSequence });
 	if (tab.url && tab.url !== "about:blank") {
+		tabSequence.push(event);
+		chrome.storage.local.set({ tabSequence });
 		fetchTabHTML(tab.id, tab.url);
 	}
 }
@@ -94,7 +94,8 @@ function fetchTabHTML(tabId, url) {
 		},
 		(results) => {
 			if (chrome.runtime.lastError || !results || results.length === 0) {
-				console.error(`Failed to get HTML for tab ${tabId}:`, chrome.runtime.lastError);
+				console.error(`Failed to get HTML for tab ${tabId}:`,
+							  chrome.runtime.lastError);
 				return;
 			}
 			const html = results[0].result;

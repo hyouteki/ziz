@@ -1,0 +1,28 @@
+body {
+	font-family: Arial, sans-serif;
+	width: 250px;
+	padding: 10px;
+}
+
+h2 {
+	text-align: center;
+}
+
+.controls {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+button {
+	padding: 8px;
+	font-size: 14px;
+}
+
+.status, .download {
+	margin-top: 10px;
+}
+
+.status p, .download button {
+	text-align: center;
+}

@@ -1,0 +1,146 @@
+[
+    {
+        "tab_id": 1259515558,
+        "timestamp": "2024-10-10T12:47:12.118Z",
+        "event_type": "url_change",
+        "url": "https://www.wufoo.com/gallery/templates/forms/",
+        "fields": [
+            {
+                "intent": "Search From Over 400+ Form Templates",
+                "xpath": "/html/body/main/div[1]/div/form/div/input",
+                "type": "search",
+                "value": null
+            }
+        ]
+    },
+    {
+        "tab_id": 1259515557,
+        "timestamp": "2024-10-10T12:47:12.252Z",
+        "event_type": "url_change",
+        "url": "https://formsmarts.com/html-form-example",
+        "fields": [
+            {
+                "intent": "Search FormSmarts",
+                "xpath": "/html/body/nav/div/div[3]/form/div[2]/input",
+                "type": "search",
+                "value": null
+            },
+            {
+                "intent": "Stay up to date with our latest news",
+                "xpath": "/html/body/footer/div[1]/div/div[1]/div[2]/div/div/form/div/input",
+                "type": "email",
+                "value": null
+            }
+        ]
+    },
+    {
+        "tab_id": 1259515560,
+        "timestamp": "2024-10-10T12:47:14.344Z",
+        "event_type": "url_change",
+        "url": "https://clearout.io/blog/website-form-examples/",
+        "fields": [
+            {
+                "intent": "Search",
+                "xpath": "/html/body/div[3]/div/div/div/div[3]/div[1]/form/div/input",
+                "type": "search",
+                "value": ""
+            }
+        ]
+    },
+    {
+        "tab_id": 1259515559,
+        "timestamp": "2024-10-10T12:47:15.958Z",
+        "event_type": "url_change",
+        "url": "https://blog.hubspot.com/marketing/form-examples",
+        "fields": [
+            {
+                "intent": "Search FormSmarts",
+                "xpath": "/html/body/nav/div/div[3]/form/div[2]/input",
+                "type": "search",
+                "value": null
+            },
+            {
+                "intent": null,
+                "xpath": "/html/body/div[1]/div[2]/div[1]/section[4]/section[2]/section[5]/form[1]/input",
+                "type": null,
+                "value": null
+            },
+            {
+                "intent": null,
+                "xpath": "/html/body/div[1]/div[2]/div[1]/section[4]/section[2]/section[5]/form[2]/textarea",
+                "value": null
+            },
+            {
+                "intent": "rb",
+                "xpath": "/html/body/div[1]/div[2]/div[1]/section[4]/section[2]/section[5]/form[3]/label[1]/input",
+                "type": "radio",
+                "value": "3"
+            },
+            {
+                "intent": "rb",
+                "xpath": "/html/body/div[1]/div[2]/div[1]/section[4]/section[2]/section[5]/form[3]/label[2]/input",
+                "type": "radio",
+                "value": "2"
+            },
+            {
+                "intent": "rb",
+                "xpath": "/html/body/div[1]/div[2]/div[1]/section[4]/section[2]/section[5]/form[3]/label[3]/input",
+                "type": "radio",
+                "value": "1"
+            },
+            {
+                "intent": null,
+                "xpath": "/html/body/div[1]/div[2]/div[1]/section[4]/section[2]/section[5]/form[4]/select",
+                "options": [
+                    "3",
+                    "2",
+                    "1"
+                ]
+            },
+            {
+                "intent": "Subscribe to our newsletter",
+                "xpath": "/html/body/div[1]/div[2]/div[1]/section[4]/section[2]/section[5]/form[5]/input",
+                "type": "checkbox",
+                "value": null
+            },
+            {
+                "intent": "Stay up to date with our latest news",
+                "xpath": "/html/body/footer/div[1]/div/div[1]/div[2]/div/div/form/div/input",
+                "type": "email",
+                "value": null
+            }
+        ]
+    },
+    {
+        "tab_id": 1259515561,
+        "timestamp": "2024-10-10T12:47:19.563Z",
+        "event_type": "url_change",
+        "url": "https://formsmarts.com/form-builder-help",
+        "fields": [
+            {
+                "intent": "Search...",
+                "xpath": "/html/body/div[1]/header/nav/div[2]/div/div[1]/div/div[2]/form/div/input",
+                "type": "text",
+                "value": null
+            },
+            {
+                "intent": "search-term",
+                "xpath": "/html/body/div[1]/header/nav/div[2]/div/div[3]/div/div/section[1]/form/div/label/div/input",
+                "type": "search",
+                "value": null
+            },
+            {
+                "intent": "email",
+                "xpath": "/html/body/div[1]/div[2]/div/div/aside/div[2]/div/div/form/div/label/div/input[1]",
+                "type": "email",
+                "value": ""
+            },
+            {
+                "intent": "recent_custom_form_module_53",
+                "xpath": "/html/body/div[1]/div[2]/div/div/aside/div[2]/div/div/form/div/label/div/input[2]",
+                "type": "text",
+                "value": "blog exit intent"
+            }
+        ]
+    }
+]

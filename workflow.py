@@ -56,7 +56,22 @@ class WorkflowEvent:
             "url": self.url,
             "fields": self.fields,
         }
-        
+
+    @classmethod
+    def compare(cls, obj1: "WorkflowEvent",
+                obj2: "WorkflowEvent") -> (bool, str):
+        if obj1.url != obj2.url:
+            return (False, "WorkflowEvent urls are different; found "
+                    + f"'{obj1.url}' and '{obj2.url}'")
+        if len(obj1.fields) != len(obj2.fields):
+            return (False, "WorkflowEvent fields count is different; found "
+                    + f"'{len(obj1.fields)}' and '{len(obj2.fields)}'")
+        for i in range(len(obj1.fields)):
+            if obj1.fields[i] != obj2.fields[i]:
+                return (False, "WorkflowEvent fields are different; found "
+                    + f"'{obj1.fields[i]}' and '{obj2.fields[i]}'")
+        return (True, "") 
+
 class Workflow:
     def __init__(self) -> "Workflow":
         self.clear()
@@ -92,8 +107,17 @@ class Workflow:
                 WorkflowEventType.from_str(ele["event_type"]),
                 ele["url"], html=None, fields=ele["fields"]))
 
-    def compare(self, obj: "Workflow") -> bool:
-        return False
+    @classmethod
+    def compare(cls, obj1: "Workflow", obj2: "Workflow") -> (bool, str):
+        if len(obj1.sequence) != len(obj2.sequence):
+            return (False, "Workflow steps count is different; found "
+                    + f"'{len(obj1.sequence)}' and '{len(obj1.sequence)}'")
+        for i in range(len(obj1.sequence)):
+            is_equal, msg = WorkflowEvent.compare(
+                obj1.sequence[i], obj2.sequence[i])
+            if not is_equal:
+                return (False, msg)
+        return (True, "")
 
 if __name__ == "__main__":
     workflow = Workflow()
@@ -107,4 +131,4 @@ if __name__ == "__main__":
     workflow.load_workflow(out_filepath)
     workflow2 = Workflow()
     workflow2.load_workflow(copy_path)
-    print(workflow.compare(workflow2))
+    print(Workflow.compare(workflow, workflow2))
